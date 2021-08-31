@@ -1,20 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Directory from '../../components/directory/directory.component'
+
 import './homepage.styles.scss'
 
-class Homepage extends Component {
-   
-
-    render() {
-        return (
-            <div className="homepage">
-                <Directory />
-            </div>
-        )
-    }
+const Homepage = ({ history }) => {
+    return (
+        <div className="homepage">
+            <Directory />
+        </div>
+    )
 }
-
-
 
 export default Homepage

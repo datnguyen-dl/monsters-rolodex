@@ -9,32 +9,32 @@ class Directory extends Component {
         this.state = {
             sections: [
                 {
-                    name: 'blog topics',
+                    title: 'blog topics',
                     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                     id: 1,
-                    linkUrl: 'blog/topics'
+                    linkUrl: 'hats'
                 },
                 {
-                    name: 'contact topics',
+                    title: 'contact topics',
                     imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
                     id: 2,
-                    linkUrl: 'contact/topics'
+                    linkUrl: ''
                 },
                 {
-                    name: 'sneakers',
+                    title: 'sneakers',
                     imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                     id: 3,
                     linkUrl: ''
                 },
                 {
-                    name: 'womens',
+                    title: 'womens',
                     imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                     size: 'large',
                     id: 4,
                     linkUrl: ''
                 },
                 {
-                    name: 'mens',
+                    title: 'mens',
                     imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                     size: 'large',
                     id: 5,
@@ -62,7 +62,7 @@ class Directory extends Component {
         const { sections, searchField } = this.state
         // array.filter(function(currentValue, index, arr), thisValue)
         const filteredSections = sections.filter(section =>
-            section.name.toLowerCase().includes(searchField.toLowerCase())
+            section.title.toLowerCase().includes(searchField.toLowerCase())
         )
 
         return (
@@ -73,7 +73,7 @@ class Directory extends Component {
                 />
                 <br /><br />
                 <div className="directory-menu">
-                {/* { id, name, imageUrl, linkUrl } */}
+                {/* { id, title, imageUrl, linkUrl } */}
                     {filteredSections.map(({ id, ...otherSectionProps }) =>
                         <MenuItem key={id} {...otherSectionProps} />
                     )}

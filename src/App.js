@@ -47,7 +47,7 @@ class App extends Component {
               ...snapShot.data()
             }
           });
-          console.log("AAA",this.state)
+          // console.log("AAA",this.state)
         });
       }
 

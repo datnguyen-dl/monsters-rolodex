@@ -25,7 +25,7 @@ class SignUp extends Component {
         const { displayName, email, password, confirmPassword } = this.state
         // console.log(displayName, email, password, confirmPassword)
         if (password !== confirmPassword){
-            alert("password don't match")
+            alert("DANG KY BI LOI: password don't match")
             return
         }
 
@@ -42,14 +42,12 @@ class SignUp extends Component {
             })
 
         }catch(error){
-            console.log(error)
+            console.log('DANG KY BI LOI:', error)
         }
     }
 
     handleChange = (event)=>{
-        // event.preventDefault();
         const {name, value} = event.target;
-
         this.setState({[name]: value})
     }
 

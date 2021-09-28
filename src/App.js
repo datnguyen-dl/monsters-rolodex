@@ -84,14 +84,18 @@ class App extends Component {
   }
 }
 
+// mapStateToProps?: (state, ownProps?) => Object
+// Hàm mapStateToProps là một bộ lọc (filter) sử dụng để lấy (select) những thứ trong cái thùng chứa mà component yêu cầu
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
 
+// mapDispatchToProps?: Object | (dispatch, ownProps?) => Object
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
+// function connect(mapStateToProps?, mapDispatchToProps?, mergeProps?, options?)
 export default connect(
   mapStateToProps,
   mapDispatchToProps

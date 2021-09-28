@@ -10,10 +10,12 @@ const CollectionPreview = ({ title, items }) => {
         <div className='collection-preview'>
             <h1 className="title">{title.toUpperCase()}</h1>
             <div className="preview">
+                {/* FilterItems.map(({id, ...otherCollectionitems}) */}
                 {
-                    FilterItems.map(({id, ...otherCollectionitems}) => {
+                    FilterItems.map((item) => {
+                        // console.log("CollectionPreview", item)
                         return (
-                            <CollectionItem key={id} {...otherCollectionitems}/>
+                            <CollectionItem key={item.id} item={item} />
                         )
                     })
                 }

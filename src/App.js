@@ -86,11 +86,13 @@ class App extends Component {
 
 // mapStateToProps?: (state, ownProps?) => Object
 // Hàm mapStateToProps là một bộ lọc (filter) sử dụng để lấy (select) những thứ trong cái thùng chứa mà component yêu cầu
+// mapStateToProps - dùng để map State của Component với State trong Store của Redux
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
 
 // mapDispatchToProps?: Object | (dispatch, ownProps?) => Object
+// mapDispatchToProps - dùng để map method của Component với lời gọi action từ Store tới Actions của Redux
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })

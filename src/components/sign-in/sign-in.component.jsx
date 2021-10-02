@@ -7,7 +7,6 @@ import { auth, signInWithGoogle } from '../../firebase/firebase.utils'
 
 import './sign-in.styles.scss'
 
-
 class SignIn extends Component {
     constructor() {
         super()
@@ -67,4 +66,5 @@ class SignIn extends Component {
         )
     }
 }
+
 export default SignIn
